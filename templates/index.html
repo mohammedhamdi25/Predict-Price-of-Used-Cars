@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+    
+    <main>
+        <div class="title">
+            <h1>Car Price Prediction</h1>
+            <p>Predict the price of used cars.</p>
+        </div>
+        <form action="/predict" method="POST">
+            <div>
+                <label for="year">year</label>
+                <input type="text" name="year" id="year">
+            </div>
+            <div>
+                <label for="transmission">transmission</label>
+                <select id="transmission" name="transmission"  >
+                    <option value="0">Automatic</option>
+                    <option value="2">Semi-Auto</option>
+                    <option value="1">Manual</option>
+                </select>
+            </div>
+            <div>
+                <label for="mileage">mileage</label>
+                <input type="text"  name="mileage" id="mileage">
+            </div>
+            <div>
+                <label for="fuelType">fuelType</label>
+                <select id="fuelType" name="fuelType" class="" >
+                    <option value="4">Petrol</option>
+                    <option value="0">Diesel</option>
+                    <option value="2">Hybrid</option>
+                    <option value="1">Electric</option>
+                    <option value="3">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="tax">tax</label>
+                <input type="text" name="tax" id="tax">
+            </div>
+            <div>
+                <label for="mpg">mpg</label>
+                <input type="text" name="mpg" id="mpg">
+            </div>
+            <div>
+                <label for="engineSize">engineSize</label>
+                <input type="text" name="engineSize" id="engineSize">
+            </div>
+            <button type="submit">submit</button>
+        </form>
+        <div class="result">
+            <h1>
+                {{pred}}
+            </h1>
+        </div>
+    </main>
+    
+    
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
